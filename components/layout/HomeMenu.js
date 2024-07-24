@@ -1,5 +1,7 @@
 import React from 'react'
 import Image from "next/image";
+import MenuItem from "@/components/Menu/MenuItem";
+import SectionHeaders from "@/components/layout/SectionHeader"
 
 const HomeMenu = () => {
   return (
@@ -11,9 +13,19 @@ const HomeMenu = () => {
             <div className="absolute -top-[100px] right-0 -z-10">
                 <Image src={'/sallad2.png'} width={107} height={195} alt={'sallad'} />
             </div>
-            <div className='text-center'>
-                <h3 className='uppercase text-gray-500 font-semibold leading-4'>Checkout</h3>
-                <h2 className='text-primary font-bold text-4xl italic'>Menu</h2>
+            <div className="text-center mb-4">
+                <SectionHeaders
+                    subHeader={'check out'}
+                    mainHeader={'Our Best Sellers'} />
+            </div>
+
+            <div className='grid grid-cols-3 gap-4'> 
+                <MenuItem />
+                <MenuItem />
+                <MenuItem />
+                <MenuItem />
+                <MenuItem />
+                <MenuItem />
             </div>
         </div>
         
