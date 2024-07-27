@@ -16,7 +16,7 @@ export default function RegisterPage() {
     setCreatingUser(true);
     setError(false);
     setUserCreated(false);
-    const response = await fetch('http://localhost:3000/api/register', {
+    const response = await fetch('api/register', {
       method: 'POST',
       body: JSON.stringify({ email, password }),
       headers: { 'Content-Type': 'application/json' },
