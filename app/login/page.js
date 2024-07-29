@@ -1,39 +1,34 @@
-"use client";
-import { useState } from 'react'
+'use client';
 import {signIn} from "next-auth/react";
 import Image from "next/image";
+import {useState} from "react";
 
-const LoginPage = () => {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [loginInProgress, setLoginInProgress] = useState(false);
+export default function LoginPage() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [loginInProgress, setLoginInProgress] = useState(false);
 
-    async function handleFormSubmit(ev) {
-      ev.preventDefault();
-      setLoginInProgress(true);
-  
-      await signIn('credentials', {email, password, callbackUrl: '/'});
-  
-      setLoginInProgress(false);
-    }
+  async function handleFormSubmit(ev) {
+    ev.preventDefault();
+    setLoginInProgress(true);
+
+    await signIn('credentials', {email, password, callbackUrl: '/'});
+
+    setLoginInProgress(false);
+  }
   return (
-    <section className='text-center text-primary text-4xl mb-4' onSubmit={handleFormSubmit}>
-      <h1>
+    <section className="mt-8">
+      <h1 className="text-center text-primary text-4xl mb-4">
         Login
       </h1>
-      <form className="max-w-xs mx-auto" >
-        <input 
-            type='email' placeholder='email' value={email} 
-            disabled={false} className=''
-            onChange={ev => setEmail(ev.target.value)} 
-        />
-        <input 
-            type='password' 
-            placeholder='password' value={email} disabled={false} 
-            className=''
-            onChange={ev => setPassword(ev.target.value)} 
-        />
-         <button disabled={loginInProgress} type="submit">Login</button>
+      <form className="max-w-xs mx-auto" onSubmit={handleFormSubmit}>
+        <input type="email" name="email" placeholder="email" value={email}
+               disabled={loginInProgress}
+               onChange={ev => setEmail(ev.target.value)} />
+        <input type="password" name="password" placeholder="password" value={password}
+               disabled={loginInProgress}
+               onChange={ev => setPassword(ev.target.value)}/>
+        <button disabled={loginInProgress} type="submit">Login</button>
         <div className="my-4 text-center text-gray-500">
           or login with provider
         </div>
@@ -44,7 +39,5 @@ const LoginPage = () => {
         </button>
       </form>
     </section>
-  )
+  );
 }
-
-export default LoginPage
