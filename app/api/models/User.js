@@ -2,7 +2,11 @@ import { model, models, Schema } from "mongoose";
 
 const SALT_ROUNDS = 10;
 
+
 const UserSchema = new Schema({
+  image: {
+    type: String,
+  },
   name: {
     type: String,
   },
@@ -11,9 +15,25 @@ const UserSchema = new Schema({
     required: true,
     unique: true,
   },
+  phoneNumber: {
+    type: String,
+  },
+  streetAddress: {
+    type: String,
+  },
+  postalCode: {
+    type: String,
+  },
+  city: {
+    type: String,
+  },
+  country: {
+    type: String,
+  },
   password: {
     type: String,
   },
+  admin: {type: Boolean, default: false},
 }, { timestamps: true });
 
 // UserSchema.pre("save", async function (next) {
