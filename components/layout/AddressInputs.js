@@ -13,6 +13,8 @@ export default function AddressInputs({addressProps,setAddressProp,disabled=fals
         type="text" placeholder="Street address"
         value={streetAddress || ''} onChange={ev => setAddressProp('streetAddress', ev.target.value)}
       />
+
+      
       <div className="grid grid-cols-2 gap-2">
         <div>
           <label>Postal code</label>
@@ -31,6 +33,8 @@ export default function AddressInputs({addressProps,setAddressProp,disabled=fals
           />
         </div>
       </div>
+
+      
       <label>Country</label>
       <input
         disabled={disabled}
