@@ -4,7 +4,7 @@ import EditableImage from "@/components/layout/EditableImage";
 import {useProfile} from "@/components/UseProfile";
 import {useState} from "react";
 
-export default function UserForm({user,onSave}) {
+export default function UserForm({user,onSave, session}) {
   const [userName, setUserName] = useState(user?.name || 'hello');
   const [image, setImage] = useState(user?.image || '');
   const [phone, setPhone] = useState(user?.phone || '');
