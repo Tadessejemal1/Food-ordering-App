@@ -4,7 +4,8 @@ import UserTabs from "@/components/layout/UserTabs";
 import {useProfile} from "@/components/UseProfile";
 import {useParams} from "next/navigation";
 import {useEffect, useState} from "react";
-import toast from "react-hot-toast";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function EditUserPage() {
   const {loading, data} = useProfile();
@@ -54,6 +55,7 @@ export default function EditUserPage() {
       <div className="mt-8">
         <UserForm user={user} onSave={handleSaveButtonClick} />
       </div>
+      <ToastContainer />
     </section>
   );
 }

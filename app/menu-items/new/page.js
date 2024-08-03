@@ -5,10 +5,11 @@ import EditableImage from "@/components/layout/EditableImage";
 import MenuItemForm from "@/components/layout/MenuItemForm";
 import UserTabs from "@/components/layout/UserTabs";
 import {useProfile} from "@/components/UseProfile";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Link from "next/link";
 import {redirect} from "next/navigation";
 import {useState} from "react";
-import toast from "react-hot-toast";
 
 export default function NewMenuItemPage() {
 
@@ -60,6 +61,7 @@ export default function NewMenuItemPage() {
         </Link>
       </div>
       <MenuItemForm menuItem={null} onSubmit={handleFormSubmit} />
+      <ToastContainer />
     </section>
   );
 }

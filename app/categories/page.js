@@ -2,7 +2,8 @@
 import DeleteButton from "@/components/DeleteButton";
 import UserTabs from "@/components/layout/userTabs";
 import {useEffect, useState} from "react";
-import toast from "react-hot-toast";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function CategoriesPage() {
 
@@ -128,6 +129,7 @@ export default function CategoriesPage() {
           </div>
         ))}
       </div>
+      <ToastContainer />
     </section>
   );
 }

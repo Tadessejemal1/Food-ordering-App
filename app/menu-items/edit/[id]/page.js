@@ -1,5 +1,7 @@
 'use client';
 import DeleteButton from "@/components/DeleteButton";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Left from "@/components/icons/Left";
 import EditableImage from "@/components/layout/EditableImage";
 import MenuItemForm from "@/components/layout/MenuItemForm";
@@ -8,7 +10,6 @@ import {useProfile} from "@/components/UseProfile";
 import Link from "next/link";
 import {redirect, useParams} from "next/navigation";
 import {useEffect, useState} from "react";
-import toast from "react-hot-toast";
 
 export default function EditMenuItemPage() {
 
@@ -102,6 +103,7 @@ export default function EditMenuItemPage() {
           />
         </div>
       </div>
+      <ToastContainer />
     </section>
   );
 }
