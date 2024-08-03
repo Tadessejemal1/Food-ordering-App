@@ -15,7 +15,6 @@ import UserForm from '@/components/layout/UserForm';
 const ProfilePage = () => {
   const session = useSession();
   const [user, setUser] = useState(null);
-  console.log(user);
   const [isAdmin, setIsAdmin] = useState(false);
   const [profileFetched, setProfileFetched] = useState(false);
   const {status} = session;
