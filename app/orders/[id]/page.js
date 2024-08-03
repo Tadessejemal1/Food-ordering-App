@@ -1,7 +1,7 @@
 'use client';
 import {CartContext, cartProductPrice} from "@/components/AppContext";
 import AddressInputs from "@/components/layout/AddressInputs";
-import SectionHeaders from "@/components/layout/SectionHeaders";
+import SectionHeaders from "@/components/layout/SectionHeader";
 import CartProduct from "@/components/menu/CartProduct";
 import {useParams} from "next/navigation";
 import {useContext, useEffect, useState} from "react";
