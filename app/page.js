@@ -17,10 +17,10 @@ const page = () => {
         />
         <div className="text-gray-500 max-w-md mx-auto mt-4 flex flex-col gap-4">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni minima odit recusandae. Illum ipsa non repudiandae? Eum ipsam iste quos suscipit tempora? Aperiam esse fugiat inventore laboriosam officiis quam rem!
+          Welcome to FoodieGo, where we redefine the way you experience food delivery! Founded with a passion for connecting people with their favorite meals, we aim to make ordering food as delightful and seamless as possible.
           </p>
-          <p>At consectetur delectus ducimus est facere iure molestias obcaecati quaerat vitae voluptate? Aspernatur dolor explicabo iste minus molestiae pariatur provident quibusdam saepe?</p>
-          <p>Laborum molestias neque nulla obcaecati odio quia quod reprehenderit sit vitae voluptates? Eos, tenetur.</p>
+          <p>At FoodieGo, our mission is simple: to bring deliciousness to your doorstep with ease and efficiency. We understand that food is more than just sustenance; it’s about pleasure, convenience, and community.</p>
+          <p>That’s why we work tirelessly to ensure you have access to a wide variety of high-quality restaurants and cuisines, all from the comfort of your home.</p>
         </div>
       </section>
       <section className="text-center my-8" id="contact">
@@ -30,7 +30,7 @@ const page = () => {
         />
         <div className="mt-8">
           <a className="text-4xl underline text-gray-500" href="tel:+46738123123">
-            +46 738 123 123
+            +251 738 123 123
           </a>
         </div>
       </section>
