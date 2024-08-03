@@ -1,5 +1,4 @@
 
-'use client'
 import {CartContext} from "@/components/AppContext";
 import MenuItemTile from "@/components/menu/MenuItemTile";
 import Image from "next/image";
